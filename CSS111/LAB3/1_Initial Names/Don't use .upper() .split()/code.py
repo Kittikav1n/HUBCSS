@@ -13,8 +13,6 @@ def Separate_words(text):
     if space_str:
         word.append(space_str)
     return word
-
-
 list_of_words = Separate_words(name)
 
 result = ""
