@@ -1,6 +1,5 @@
 def extract_words(text):
-    words_list = text.split()
-
+    words_list = text.split(" ")
     long_words = [] 
     for word in words_list:
         if len(word) > 4:
