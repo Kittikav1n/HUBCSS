@@ -9,7 +9,7 @@ def add_book(books, isbn, title, author, copies):
     }
 
     if any(b['isbn'] == isbn for b in books):
-        print(f"Book with ISBN {isbn} already exists.")
+        print(f"# Book with ISBN {isbn} already exists.")
         return 1
     else:
         books.append(book)
@@ -24,20 +24,19 @@ def search_books(books, keyword):
 
 #Show all books 
 def show_books(books):
-    n = 0
     if not books:
         print("No books available.")
     else:
         for book in books:  
-            n += 1
-            print(f"No.{n} ISBN:{book['isbn']}, Title: {book['title']}, Author: {book['author']}, Copies: {book['total_copies']}")
+            print(f"ISBN:{book['isbn']}, Title: {book['title']}, Author: {book['author']}, Copies: {book['total_copies']}")
 
 def show_search_books(results):
     if not results:
         print("No matching books found.")
     else:
-        for book in results:
-            print(f"ISBN: {book['isbn']}, Title: {book['title']}, Author: {book['author']}, Copies: {book['total_copies']}")
+        show_books(results)
+
+
 
 add_book(books, '001', 'Python Crash Course', 'Eric Matthes', 3)
 add_book(books, '002', 'Clean Code', 'Robert Martin', 2)
@@ -46,6 +45,20 @@ add_book(books, '004', 'Design Patterns', 'Gang of Four', 1)
 add_book(books, '005', 'Introduction to Algorithms', 'Cormen et al.', 2)
 add_book(books, '006', 'Code Complete', 'Steve McConnell', 3)
 add_book(books, '007', 'Refactoring', 'Martin Fowler', 2)
+add_book(books, '007', 'Refactoring', 'Martin Fowler', 2)
+
+print()
+print("All Books")
 show_books(books)
+print()
+print("Add Book")
+add_book(books, input("Enter ISBN: "), input("Enter Title: "), input("Enter Author: "), input("Enter Copies: "))
+
+print()
+print("All Books")
+show_books(books)
+
+print()
+print("Search Books")
 results = search_books(books, input("Enter a keyword to search: "))
 show_search_books(results)
