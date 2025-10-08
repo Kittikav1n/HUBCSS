@@ -1,13 +1,10 @@
 #include <stdio.h>
-
     struct student{
         char name[30];
         int age;
         float grade;
     };
-    
     float sum = 0;
-    
     
 struct student max(struct student students[], int n) {
     struct student max_s = students[0];
@@ -25,17 +22,13 @@ void outdata(struct student students[], int n){
         printf("Name %s Age %d Grade %.2f \n", students[i].name, students[i].age, students[i].grade);
     }
 }
-    
-
 
 int main()
 {
-
     struct student students[5];
     for (int i = 0; i < 5; i++){
         scanf("%29s %d %f", students[i].name, &students[i].age, &students[i].grade);
-        sum  += students[i].grade;
-        
+        sum  += students[i].grade;  
     }
     struct student maxscore = max(students, 5);
     outdata(students, 5);
