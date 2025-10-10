@@ -1,18 +1,8 @@
-def add_matrices(a, b):
-    # Assumes a and b are lists of lists (matrices) of the same size
-    result = []
-    for row_a, row_b in zip(a, b):
-        result.append([x + y for x, y in zip(row_a, row_b)])
-    return result
+#sum_even_numbers
+def sum1(number):
+    return sum([num for num in number if num % 2 == 0])
 
-# Example usage
-matrix1 = [
-    [1, 2],
-    [3, 4]
-]
-matrix2 = [
-    [5, 6],
-    [7, 8]
-]
-sum_matrix = add_matrices(matrix1, matrix2)
-print("Sum Matrix:", sum_matrix)
+print(f"total =  {sum1([1, 2, 3, 4, 5, 6])}")
+print(f"total =  {sum1([10, 21, 33, 44])}")
+print(f"total =  {sum1([1, 3, 5])}")
+print(f"total =  {sum1([])}")
