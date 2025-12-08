@@ -1,6 +1,7 @@
 #include<stdio.h>
 int main(){
     int n, i;
+    
     int nums[100];
 
     printf("input: ");
