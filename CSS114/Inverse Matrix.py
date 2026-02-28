@@ -30,12 +30,12 @@ if __name__ == "__main__":
 
 #---------- Matrix A ----------
     A = np.array([
-    [0, 2, 1],
-    [1, 0, 3],
-    [4, 1, 2]
+    [1 , 2, -3],
+    [-1,  1, -1],
+    [0, -2 , 3]
 ], dtype=float)
 #---------- Ax = b ---------- 
-    #b = np.array([5, 3, -1], dtype=float)
+#b = np.array([3, 7, 5], dtype=float)
     b = None   # ← ถ้าอยากหา inverse อย่างเดียว
 
     print("\nMatrix A:")

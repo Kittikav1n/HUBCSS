@@ -44,8 +44,6 @@ def LU_solve(L, U, b):
         [0 u u]
         [0 0 u]
     """
-
-
     return x
 
 
